@@ -1,0 +1,14 @@
+#AboutUs{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 30px;
+}
+.imgContainer img{
+    width: 980px;
+}

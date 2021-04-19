@@ -1,0 +1,9 @@
+.levelsDescription{
+    display: grid;
+
+    width: fit-content;
+
+    margin-top: 40px;
+
+    max-width: 800px;
+}
