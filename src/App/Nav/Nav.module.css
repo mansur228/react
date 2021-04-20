@@ -6,7 +6,14 @@
 
     position: fixed;
 
-    z-index: 10;
+    z-index: 100;
+}
+.Nav :global(.container){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #2f2f2f;
 }
 
 
@@ -16,7 +23,6 @@
 .Logo img:last-child{
     margin-left: 5px;
 }
-
 
 .navLinksConteiner{
     display: flex;
@@ -74,4 +80,130 @@
 }
 .navLink:first-child{
     margin-left: 0;
+}
+
+.navConteinerMobile{
+    display: none;
+}
+
+@media screen and (max-width: 980px){
+    .navLinksConteiner{
+        display: none;
+    }
+
+    .navConteinerMobile{
+        display: block;
+    }
+
+    .navLinksConteinerMobile{
+        position: absolute;
+        top: -500%;
+        left: 0;
+
+        z-index: -1;
+
+        background-color: #2f2f2f;
+
+        width: 100%;
+
+        padding: 25px 10px;
+
+        overflow: hidden;
+
+        transition: .8s;
+    }
+    .navLinksConteinerMobile:global(.active){
+        top: 70%;
+    }
+
+
+    .navLinkMobile{
+        margin-left: 45px;
+        margin-top: 25px;
+
+        display: block;
+
+        width: fit-content;
+
+        font-size: 25px;
+        color: #fff;
+    
+        position: relative;
+
+        z-index: -1;
+    
+        cursor: pointer;
+    }
+    .navLinkMobile:first-child{
+        margin-top: 0;
+    }
+    .navLinkMobile::before{
+        position: absolute;
+        left: 10px;
+    
+        content: '[';
+        font-size: 25px;
+        
+        opacity: 0;
+    
+        transition: .4s ease;
+    }
+    .navLinkMobile::after{
+        position: absolute;
+        right: 10px;
+        
+        content: ']';
+        font-size: 25px;
+        
+        opacity: 0;
+    
+        transition: .4s ease;
+    }
+    .navLinkMobile:hover::before{
+        left: -14px;
+    
+        opacity: 1;
+    }
+    .navLinkMobile:hover::after{
+        right: -14px;
+    
+        opacity: 1;
+    }
+    .navLinkMobile:hover{
+        color: #ccc;
+    }
+
+
+    .burgerMenuContainer{
+        width: 50px;
+        height: 46px;
+
+        display: flex;
+        align-items: center;
+    }
+    .burgerMenuContainer:hover .burgerMenu{
+        height: 46px;
+
+        transform: rotateX(180deg);
+    }
+    .burgerMenu{
+        width: 50px;
+        height: 40px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+        transition: .6s;
+    }
+    .burgerMenu span{
+        width: 100%;
+        height: 6px;
+        
+        background-color: #fff;
+    }
+    
+
 }
