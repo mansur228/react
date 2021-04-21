@@ -11,6 +11,21 @@ export default class App extends Component {
             <>
                <Nav/>
                <Header/>
+               <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='a'>
+
+               </div>
+               <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='as'>
+
+               </div>
+               <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='asd'>
+
+               </div>
+               <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='asdf'>
+
+               </div>
+               <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='asdfg'>
+
+               </div>
             </>
         )
     }

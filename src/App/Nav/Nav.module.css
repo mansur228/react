@@ -106,19 +106,18 @@
 
         width: 100%;
 
-        padding: 25px 10px;
+        padding: 35px 30px;
 
         overflow: hidden;
 
         transition: .8s;
     }
     .navLinksConteinerMobile:global(.active){
-        top: 70%;
+        top: 70px;
     }
 
 
     .navLinkMobile{
-        margin-left: 45px;
         margin-top: 25px;
 
         display: block;
@@ -176,19 +175,17 @@
 
     .burgerMenuContainer{
         width: 50px;
-        height: 46px;
+        height: 48px;
 
         display: flex;
         align-items: center;
     }
     .burgerMenuContainer:hover .burgerMenu{
-        height: 46px;
-
-        transform: rotateX(180deg);
+        height: 100%;
     }
     .burgerMenu{
         width: 50px;
-        height: 40px;
+        height: 35px;
 
         display: flex;
         flex-direction: column;
@@ -196,7 +193,7 @@
         align-items: center;
 
 
-        transition: .6s;
+        transition: .3s;
     }
     .burgerMenu span{
         width: 100%;
