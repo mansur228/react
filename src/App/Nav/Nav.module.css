@@ -1,206 +1,153 @@
 .Nav{
-    width: 100%;
-    height: 70px;
+    --Nav-height: 70px;
 
-    background-color: #2f2f2f;
+    background-color: var(--main-color);
+
+    height: var(--Nav-height);
+    width: 100%;
 
     position: fixed;
 
-    z-index: 100;
+    z-index: 10;
 }
 .Nav :global(.container){
+    padding: 5px 15px;
+    
+    height: var(--Nav-height);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    background-color: #2f2f2f;
 }
 
-
-.Logo img{
+.NavLogo{
+    display: inline;
+}
+.NavLogo img{
     height: 50px;
 }
-.Logo img:last-child{
+.NavLogo img:last-child{
     margin-left: 5px;
 }
 
-.navLinksConteiner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.navLink{
-    margin-left: 45px;
+.NavLinks{
     font-size: 20px;
+    
+    line-height: 1;
+}
 
-    color: #fff;
+.NavLink:not(:first-child){
+    margin-left: 45px;
+}
+.NavLink{
+    --hover-color: #9f9f9f;
+    --default-margin: 20%;
+    --hover-margin: -10px;
+    --hover-transition-time: .6s;
 
     position: relative;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
+    transition: var(--hover-transition-time);
 }
-.navLink::before{
-    position: absolute;
-    left: 10px;
+.NavLink:hover{
+    color: var(--hover-color);
 
+}
+.NavLink::before{
     content: '[';
-    font-size: 25px;
     
-    opacity: 0;
-
-    transition: .4s ease;
-}
-.navLink::after{
     position: absolute;
-    right: 10px;
-    
-    content: ']';
-    font-size: 25px;
-    
+    left: var(--default-margin);
+
+    transition: var(--hover-transition-time);
+
     opacity: 0;
-
-    transition: .4s ease;
 }
-.navLink:hover::before{
-    left: -14px;
+.NavLink::after{
+    content: ']';
+    
+    position: absolute;
+    right: var(--default-margin);
+
+    transition: var(--hover-transition-time);
+
+    opacity: 0;
+}
+.NavLink:hover::before{
+    left: var(--hover-margin);
+
+    color: var(--hover-color);
 
     opacity: 1;
 }
-.navLink:hover::after{
-    right: -14px;
+.NavLink:hover::after{
+    right: var(--hover-margin);
+
+    color: var(--hover-color);
 
     opacity: 1;
 }
-.navLink:hover{
-    color: #ccc;
-}
-.navLink:first-child{
-    margin-left: 0;
-}
 
-.navConteinerMobile{
+.NavButton{
     display: none;
 }
 
-@media screen and (max-width: 980px){
-    .navLinksConteiner{
-        display: none;
+@media screen and (max-width: 920px){
+    .NavButton{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        height: 45px;
+    }
+    .NavButton span{
+        background-color: #fff;
+        
+        width: 50px;
+        height: 6px;
+
+        transition: .6s;
+    }
+    .NavButton:hover span{
+        opacity: 0.4;
+    }
+    .NavButton:global(.active){
+        opacity: 0.4;
+    }
+    .NavButton:global(.active) :global(.container).NavLinks{
+        top: var(--Nav-height);
     }
 
-    .navConteinerMobile{
-        display: block;
-    }
-
-    .navLinksConteinerMobile{
+    .NavLinks{
         position: absolute;
-        top: -500%;
+        top: -500px;
         left: 0;
-
+        
         z-index: -1;
 
-        background-color: #2f2f2f;
+        padding: 35px 25px;
+
+        background: var(--main-color);
 
         width: 100%;
-
-        padding: 35px 30px;
-
-        overflow: hidden;
-
-        transition: .8s;
-    }
-    .navLinksConteinerMobile:global(.active){
-        top: 70px;
     }
 
-
-    .navLinkMobile{
-        margin-top: 25px;
-
-        display: block;
+    .NavLinks .NavLink{
+        margin: 30px 0 0 0;
 
         width: fit-content;
 
-        font-size: 25px;
-        color: #fff;
-    
+        display: block;
+
         position: relative;
-
         z-index: -1;
-    
-        cursor: pointer;
     }
-    .navLinkMobile:first-child{
-        margin-top: 0;
-    }
-    .navLinkMobile::before{
-        position: absolute;
-        left: 10px;
-    
-        content: '[';
-        font-size: 25px;
-        
-        opacity: 0;
-    
-        transition: .4s ease;
-    }
-    .navLinkMobile::after{
-        position: absolute;
-        right: 10px;
-        
-        content: ']';
-        font-size: 25px;
-        
-        opacity: 0;
-    
-        transition: .4s ease;
-    }
-    .navLinkMobile:hover::before{
-        left: -14px;
-    
-        opacity: 1;
-    }
-    .navLinkMobile:hover::after{
-        right: -14px;
-    
-        opacity: 1;
-    }
-    .navLinkMobile:hover{
-        color: #ccc;
-    }
+    .NavLinks .NavLink:first-child{
+        margin: -10px 0 0 0;
 
+        width: fit-content;
 
-    .burgerMenuContainer{
-        width: 50px;
-        height: 48px;
-
-        display: flex;
-        align-items: center;
+        display: block;
     }
-    .burgerMenuContainer:hover .burgerMenu{
-        height: 100%;
-    }
-    .burgerMenu{
-        width: 50px;
-        height: 35px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-
-
-        transition: .3s;
-    }
-    .burgerMenu span{
-        width: 100%;
-        height: 6px;
-        
-        background-color: #fff;
-    }
-    
-
 }

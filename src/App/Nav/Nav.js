@@ -7,154 +7,50 @@ export default class Nav extends Component {
         super()
 
         this.state={
-            active: ''
-        }
-
-        this.toggle = this.toggle.bind(this)
-    }
-
-    toggle(){
-        if(this.state.active === '') {
-            this.setState({active: this.state.active = 'active'})
-        }
-        else if(this.state.active === 'active') {
-            this.setState({active: this.state.active = ''})
+            buttonState: ''
         }
     }
 
     render() {
         return (
             <div className={s.Nav}>
-                <div className={"container"}>
-                    <a className={s.Logo} onClick={
+                <div className='container'>
+                    <a className={s.NavLogo} onClick={
                         (e)=>{
-                            e.preventDefault()
+                            // e.preventDefault()
 
-                            document.querySelector('#Header_Header__ynSho').scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            })
+                            // document.querySelector('#Header').scrollIntoView({
+                            //     behavior: 'smooth',
+                            //     block: 'start'
+                            // })
                         }
                     }>
-                        <img src='../../../logo.png' alt='logo'/>
-                        <img src='../../../logoText.png' alt='logoText'/>
+                        <img src='../../../logo.png'/>
+                        <img src='../../../logoText.png'/>
                     </a>
-                    <nav className={s.navLinksConteiner}>
-                        <a className={s.navLink} href='#a' onClick={
-                            (e)=>{
-                                e.preventDefault()
-
-                                document.querySelector('#a').scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                })
-                            }
-                        }>Кто мы</a>
-                        <a className={s.navLink} href='#as' onClick={
-                            (e)=>{
-                                e.preventDefault()
-
-                                document.querySelector('#as').scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                })
-                            }
-                        }>Чему мы обучаем</a>
-                        <a className={s.navLink} href='#asd' onClick={
-                            (e)=>{
-                                e.preventDefault()
-
-                                document.querySelector('#asd').scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                })
-                            }
-                        }>Наши друзья</a>
-                        <a className={s.navLink} href='#asdf' onClick={
-                            (e)=>{
-                                e.preventDefault()
-
-                                document.querySelector('#asdf').scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                })
-                            }
-                        }>Контакты</a>
-                        <a className={s.navLink} href='#asdfg' onClick={
-                            (e)=>{
-                                e.preventDefault()
-
-                                document.querySelector('#asdfg').scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                })
-                            }
-                        }>Вход</a>
-                    </nav>
-                    <div className={s.navConteinerMobile}>
-                        <div className={s.burgerMenuContainer} onClick={this.toggle}>
-                            <div className={s.burgerMenu}>
-                                <span className={s.burgerMenuTopitem}></span>
-                                <span className={s.burgerMenuMiddleitem}></span>
-                                <span className={s.burgerMenuBottomitem}></span>
-                            </div>
-                        </div>
-                        <nav className={s.navLinksConteinerMobile + ' ' + this.state.active}>
-                            <a className={s.navLinkMobile} href='#a' onClick={
-                            (e)=>{
-                                e.preventDefault()
-
-                                document.querySelector('#a').scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                })
-                            }
-                        }>Кто мы</a>
-                            <a className={s.navLinkMobile} href='#as' onClick={
-                            (e)=>{
-                                e.preventDefault()
-
-                                document.querySelector('#as').scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                })
-                            }
-                        }>Чему мы обучаем</a>
-                            <a className={s.navLinkMobile} href='#asd' onClick={
-                            (e)=>{
-                                e.preventDefault()
-
-                                document.querySelector('#asd').scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                })
-                            }
-                        }>Наши друзья</a>
-                            <a className={s.navLinkMobile} href='#asdf' onClick={
-                            (e)=>{
-                                e.preventDefault()
-
-                                document.querySelector('#asdf').scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                })
-                            }
-                        }>Контакты</a>
-                            <a className={s.navLinkMobile} href='#asdfg' onClick={
-                            (e)=>{
-                                e.preventDefault()
-
-                                document.querySelector('#asdfg').scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                })
-                            }
-                        }>Вход</a>
+                    {/* <div className={s.NavLinksContainer}> */}
+                        <nav className={s.NavLinks}>
+                            <a className={s.NavLink} href='#a'>Кто мы</a>
+                            <a className={s.NavLink} href='#as'>Чему мы обучаем</a>
+                            <a className={s.NavLink} href='#asd'>Наши друзья</a>
+                            <a className={s.NavLink} href='#asdf'>Контакты</a>
+                            <a className={s.NavLink} href='#asdfg'>Вход</a>
                         </nav>
-                    </div>
-
+                        <div className={s.NavButton + ' ' + this.state.buttonState} onClick={()=>{
+                            if(this.state.buttonState === ''){
+                                this.setState({buttonState: this.state.buttonState = 'active'})
+                            } 
+                            else if(this.state.buttonState === 'active'){
+                                this.setState({buttonState: this.state.buttonState = ''})
+                            }
+                        }}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    {/* </div> */}
                 </div>
             </div>
         )
     }
-}
+}   
