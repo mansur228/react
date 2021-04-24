@@ -100,11 +100,56 @@ export default class Nav extends Component {
                             </div>
                         </div>
                         <nav className={s.navLinksConteinerMobile + ' ' + this.state.active}>
-                            <a className={s.navLinkMobile} href='#a'>Кто мы</a>
-                            <a className={s.navLinkMobile} href='#as'>Чему мы обучаем</a>
-                            <a className={s.navLinkMobile} href='#asd'>Наши друзья</a>
-                            <a className={s.navLinkMobile} href='#asdf'>Контакты</a>
-                            <a className={s.navLinkMobile} href='#asdfg'>Вход</a>
+                            <a className={s.navLinkMobile} href='#a' onClick={
+                            (e)=>{
+                                e.preventDefault()
+
+                                document.querySelector('#a').scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                })
+                            }
+                        }>Кто мы</a>
+                            <a className={s.navLinkMobile} href='#as' onClick={
+                            (e)=>{
+                                e.preventDefault()
+
+                                document.querySelector('#as').scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                })
+                            }
+                        }>Чему мы обучаем</a>
+                            <a className={s.navLinkMobile} href='#asd' onClick={
+                            (e)=>{
+                                e.preventDefault()
+
+                                document.querySelector('#asd').scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                })
+                            }
+                        }>Наши друзья</a>
+                            <a className={s.navLinkMobile} href='#asdf' onClick={
+                            (e)=>{
+                                e.preventDefault()
+
+                                document.querySelector('#asdf').scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                })
+                            }
+                        }>Контакты</a>
+                            <a className={s.navLinkMobile} href='#asdfg' onClick={
+                            (e)=>{
+                                e.preventDefault()
+
+                                document.querySelector('#asdfg').scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                })
+                            }
+                        }>Вход</a>
                         </nav>
                     </div>
 
