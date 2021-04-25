@@ -29,7 +29,7 @@ export default class Nav extends Component {
                         <img src='../../../logoText.png'/>
                     </a>
                     {/* <div className={s.NavLinksContainer}> */}
-                        <nav className={s.NavLinks}>
+                        <nav className={s.NavLinks + ' ' + this.state.buttonState}>
                             <a className={s.NavLink} href='#a'>Кто мы</a>
                             <a className={s.NavLink} href='#as'>Чему мы обучаем</a>
                             <a className={s.NavLink} href='#asd'>Наши друзья</a>

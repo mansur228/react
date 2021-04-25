@@ -18,6 +18,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background-color: var(--main-color);
 }
 
 .NavLogo{
@@ -115,9 +117,6 @@
     .NavButton:global(.active){
         opacity: 0.4;
     }
-    .NavButton:global(.active) :global(.container).NavLinks{
-        top: var(--Nav-height);
-    }
 
     .NavLinks{
         position: absolute;
@@ -131,6 +130,11 @@
         background: var(--main-color);
 
         width: 100%;
+
+        transition: .8s;
+    }
+    .NavLinks:global(.active){
+        top: var(--Nav-height);
     }
 
     .NavLinks .NavLink{
