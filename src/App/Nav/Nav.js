@@ -17,12 +17,12 @@ export default class Nav extends Component {
                 <div className='container'>
                     <a className={s.NavLogo} onClick={
                         (e)=>{
-                            // e.preventDefault()
+                            e.preventDefault()
 
-                            // document.querySelector('#Header').scrollIntoView({
-                            //     behavior: 'smooth',
-                            //     block: 'start'
-                            // })
+                            document.querySelector('#Header').scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            })
                         }
                     }>
                         <img src='../../../logo.png'/>
