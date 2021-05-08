@@ -2,6 +2,7 @@ import './App.css'
 
 import Nav from  './Nav/Nav.js'
 import Header from './Header/Header.js'
+import AboutUs from './AboutUs/AboutUs.js'
 
 import React, { Component } from 'react'
 
@@ -11,9 +12,7 @@ export default class App extends Component {
             <>
                <Nav/>
                <Header/>
-               <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='a'>
-
-               </div>
+               <AboutUs/>
                <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='as'>
 
                </div>

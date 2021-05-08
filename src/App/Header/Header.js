@@ -23,7 +23,7 @@ export default class Header extends Component {
                         </div>
                     </div>
                 </div>
-                <div className={s.bg}>
+                <div className={s.bgi}>
 
                 </div>
             </header>

@@ -1,7 +1,7 @@
 :global(#Header){
     height: 100vh;
 
-    padding: 100px 0;
+    padding: 100px 0 200px 0;
 
 }
 
@@ -12,8 +12,8 @@
     align-items: flex-start;
 }
 
-.bg{
-    filter: blur(4px) brightness(60%);
+.bgi{
+    filter: blur(4px) brightness(80%);
     
     position: absolute;
     top: 0;
@@ -30,14 +30,14 @@
 }
 
 .title{
-    font-size: 72px;
+    font-size: 64px;
 
     display: grid;
     grid-gap: 30px;
 
     padding-bottom: 25px;
 
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     border-bottom: 4px solid #fff;
 }
@@ -46,20 +46,21 @@
 }
 
 .subTitle{
-    font-size: 38px;
+    font-size: 32px;
     letter-spacing: 1.5px;
 }
 
 .buttonContainer{
-    margin-top: 70px;
-
+    margin-top: 60px;
+    
+    max-width: 600px;
+    width: 100%;
     
     font-size: 26px;
     
     display: flex;
     align-items: center;
-    justify-content: center;
-    column-gap: 140px;
+    justify-content: space-between;
 }
 .button{
     padding: 15px 45px;
@@ -71,7 +72,7 @@
     cursor: pointer;
 }
 .button:hover{
-    box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 5px #fff;
     
-    transform: scale(1.08);
+    transform: scale(1.04);
 }
