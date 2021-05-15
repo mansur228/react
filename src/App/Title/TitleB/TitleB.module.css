@@ -1,7 +1,9 @@
 .TitleB{
-    line-height: 1.6;
+    line-height: 1.8;
     
-    font-size: 18px;
+    font-size: 20px;
 
-    padding-left: 25px;
+    padding-left: 28px;
+
+    border-left: 2px solid #fff;
 }
