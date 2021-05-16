@@ -36,27 +36,6 @@ body{
     padding: 25px 10px;
 }
 
-.title{
-    text-align: center;
-    font-size: 48px;
-    color: #fff;
-    
-    margin-top: 70px;
-}
-
-.subTitle{
-    text-align: center;
-    font-size: 24px;
-    color: #fff;
-
-    max-width: 980px;
-    width: 100%;
-    
-    margin: 30px auto;
-    
-    line-height: 1.1;
-}
-
 @media screen and (max-width: 1380px){
     .container{
         max-width: 1180px;

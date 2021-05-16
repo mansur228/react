@@ -13,8 +13,10 @@ export default class Card extends Component {
         return (
             <div className={s.Card} style={CardBGC}>
                 <div className={s.CardBGI} style={CardBGI}></div>
+                <div className={s.darkLayer}></div>
                 <div className={s.CardContent}>
-
+                    <p className={s.title}>{this.props.title}</p>
+                    <p className={s.subTitle}>{this.props.subTitle}</p>
                 </div>
             </div>
         )

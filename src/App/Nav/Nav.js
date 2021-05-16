@@ -1,6 +1,6 @@
-import s from './Nav.module.css'
-
 import React, { Component } from 'react'
+
+import s from './Nav.module.css'
 
 export default class Nav extends Component {
     constructor(){

@@ -9,19 +9,61 @@
     position: relative;
 }
 
+.title{
+    font-size: 38px;
+
+    margin-bottom: 100%;
+
+    transition: .8s;
+}
+.subTitle{
+    font-size: 20px;
+    font-weight: 400;
+    
+    padding: 0 15px;
+}
+
 .CardBGI{
     position: absolute;
-
+    
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-
+    
     width: calc(100% - 40px);
     height: calc(100% - 40px);
 }
 
-.CardContent{
+.darkLayer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 
+    transition: .6s;
+}
+
+.CardContent{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    transition: .6;
+}
+
+.Card:hover .title{
+    margin: 25px;
+}
+.Card:hover .darkLayer{
+    background-color: rgba(0 , 0 , 0 , 0.6);
 }
 
 @media screen and (max-width: 1380px){

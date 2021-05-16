@@ -1,11 +1,13 @@
+import React, { Component } from 'react'
+
 import './App.css'
 
 import Nav from  './Nav/Nav.js'
 import Header from './Header/Header.js'
 import AboutUs from './AboutUs/AboutUs.js'
 import WhatDoWeTeach from './WhatDoWeTeach/WhatDoWeTeach.js'
+import HowWeTeach from './HowWeTeach/HowWeTeach.js'
 
-import React, { Component } from 'react'
 
 export default class App extends Component {
     render() {
@@ -15,9 +17,7 @@ export default class App extends Component {
                <Header/>
                <AboutUs/>
                <WhatDoWeTeach/>
-               <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='asd'>
-
-               </div>
+               <HowWeTeach/>
                <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='asdf'>
 
                </div>
