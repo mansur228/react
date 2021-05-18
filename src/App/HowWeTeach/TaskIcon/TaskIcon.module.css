@@ -1,0 +1,14 @@
+.Icon{
+    width: var(--icon-size);
+    height: var(--icon-size);
+
+    border: 5px solid #fff;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Icon i{
+    transform: scale(5.4);
+}

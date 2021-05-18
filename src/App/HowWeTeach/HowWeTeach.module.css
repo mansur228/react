@@ -6,3 +6,13 @@
     font-size: 20px;
     font-weight: normal;
 }
+
+.TaskIcons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 120px 0;
+
+    --icon-size: 180px;
+}

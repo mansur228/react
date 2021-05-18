@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import s from './HowWeTeach.module.css'
 
 import Title from '../Title/Title.js'
+import TaskIcon from './TaskIcon/TaskIcon.js'
 
 export default class HowWeTeach extends Component {
     render() {
@@ -15,6 +16,11 @@ export default class HowWeTeach extends Component {
                     <h3 className={s.title}>
                         Для того, чтобы попасть на занятия, нужно выполнить три простых действия:
                     </h3>
+                    <div className={s.TaskIcons}>
+                        <TaskIcon icon='far fa-clipboard' text=''/>
+                        <TaskIcon icon='fas fa-chalkboard-teacher' text=''/>
+                        <TaskIcon icon='fas fa-laptop' text=''/>
+                    </div>
                 </div>
             </section>
         )
