@@ -7,7 +7,7 @@ export default class TaskIcon extends Component {
         return (
             <div className={s.Icon}>
                 <i className={this.props.icon}></i>
-                <p>{this.props.text}</p>
+                <a className={s.iconTitle} href={this.props.hrefLink}>{this.props.text}</a>
             </div>
         )
     }

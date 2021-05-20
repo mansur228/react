@@ -17,9 +17,9 @@ export default class HowWeTeach extends Component {
                         Для того, чтобы попасть на занятия, нужно выполнить три простых действия:
                     </h3>
                     <div className={s.TaskIcons}>
-                        <TaskIcon icon='far fa-clipboard' text=''/>
-                        <TaskIcon icon='fas fa-chalkboard-teacher' text=''/>
-                        <TaskIcon icon='fas fa-laptop' text=''/>
+                        <TaskIcon icon='far fa-clipboard' text='Записаться' hrefLink='#ww'/>
+                        <TaskIcon icon='fas fa-chalkboard-teacher' text='Пройти пробное занятие' hrefLink='#ww'/>
+                        <TaskIcon icon='fas fa-laptop' text='Начать обучение' hrefLink='#ww'/>
                     </div>
                 </div>
             </section>

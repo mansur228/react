@@ -76,3 +76,36 @@
     
     transform: scale(1.04);
 }
+
+@media screen and (max-width: 820px){
+    .title{
+        font-size: 52px;
+    }
+    .subTitle{
+        font-size: 32px;
+    }
+    .buttonContainer{
+        font-size: 18px;
+        max-width: 500px;
+    }
+    .button{
+        width: fit-content;
+    }
+}
+@media screen and (max-width: 650px){
+    .title{
+        font-size: 36px;
+    }
+    .subTitle{
+        font-size: 24px;
+    }
+    .buttonContainer{
+        font-size: 20px;
+        max-width: 500px;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto;
+        row-gap: 20px;
+    }
+}

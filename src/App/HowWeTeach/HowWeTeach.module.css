@@ -12,7 +12,13 @@
     justify-content: space-around;
     align-items: center;
 
-    padding: 120px 0;
-
     --icon-size: 180px;
+}
+
+@media screen and (max-width: 900px){
+    .TaskIcons{
+        flex-direction: column;
+
+        margin-top: 40px;
+    }
 }

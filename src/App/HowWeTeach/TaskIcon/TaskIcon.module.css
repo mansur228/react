@@ -2,13 +2,33 @@
     width: var(--icon-size);
     height: var(--icon-size);
 
+    margin: 100px 50px;
+
     border: 5px solid #fff;
     border-radius: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 }
 .Icon i{
     transform: scale(5.4);
+}
+
+.iconTitle{
+    position: absolute;
+    top: calc(var(--icon-size) + 20px);
+
+    width: max-content;
+
+    font-size: 20px;
+
+    transition: .6s;
+}
+
+
+.Icon:hover .iconTitle{
+    color: #a7a7a7;
 }
