@@ -1,0 +1,35 @@
+.linkInfo{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+.socials{
+    display: grid;
+
+    grid-template-rows: repeat(4 , 70px);
+    grid-gap: 20px;
+}
+.socials i{
+    font-size: 40px;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.numbers{
+    font-size: 24px;
+
+    display: grid;
+    grid-gap: 20px;
+    
+    margin-bottom: 50px;
+}
+.adress{
+    font-size: 24px;
+    
+    display: grid;
+    grid-gap: 20px;
+}

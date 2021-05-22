@@ -14,7 +14,7 @@ import partnerIconSRC4 from './OurFriendsIMG/p4.svg'
 export default class OurFriends extends Component {
     render() {
         return (
-            <section className='OurFriends'>
+            <section id='OurFriends'>
                 <div className='container'>
                     <Title textA='Наши друзья'/>
                     <div className={s.partnersIcon}>

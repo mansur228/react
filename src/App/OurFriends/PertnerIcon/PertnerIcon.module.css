@@ -1,3 +1,19 @@
 .PertnerIcon img{
     width: 160px;
 }
+
+@media screen and (max-width: 1200px) {
+    .PertnerIcon img{
+        width: 160px;
+    }
+    .PertnerIcon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 650px) {
+    .PertnerIcon img{
+        width: 240px;
+    }
+}

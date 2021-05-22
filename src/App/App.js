@@ -8,6 +8,7 @@ import AboutUs from './AboutUs/AboutUs.js'
 import WhatDoWeTeach from './WhatDoWeTeach/WhatDoWeTeach.js'
 import HowWeTeach from './HowWeTeach/HowWeTeach.js'
 import OurFriends from './OurFriends/OurFriends.js'
+import Footer from './Footer/Footer.js'
 
 
 export default class App extends Component {
@@ -20,12 +21,7 @@ export default class App extends Component {
                <WhatDoWeTeach/>
                <HowWeTeach/>
                <OurFriends/>
-               <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='asdf'>
-
-               </div>
-               <div style={{height : '795px' , borderBottom : '3px solid #fff'}} id='asdfg'>
-
-               </div>
+               <Footer/>
             </>
         )
     }
