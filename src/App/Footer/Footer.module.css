@@ -1,6 +1,6 @@
 .linkInfo{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: auto min-content;
 }
 
 
@@ -19,11 +19,19 @@
     flex-direction: column;
     justify-content: space-around;
 }
+.contacts div{
+    padding: 10px 40px;
+
+    border-left: 2px solid #fff;
+}
+.contacts div p{
+    line-height: 1.8;
+}
 .numbers{
     font-size: 24px;
 
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 30px;
     
     margin-bottom: 50px;
 }
@@ -31,5 +39,27 @@
     font-size: 24px;
     
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 30px;
+}
+
+@media screen and (max-width: 990px){
+    .linkInfo{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2 , fit-content);
+    }
+
+    .socials{
+        display: grid;
+    
+        grid-template-columns: repeat(4 , 70px);
+        grid-template-rows: 1fr;
+        grid-gap: 20px;
+
+        margin-top: 60px;
+
+        padding: 15px 40px;
+
+        border-left: 2px solid #fff;
+    }
 }

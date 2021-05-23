@@ -11,7 +11,7 @@ import Adress from './Adress/Adress.js'
 export default class Footer extends Component {
     render() {
         return (
-            <footer id='footer'>
+            <footer id='Footer'>
                 <div className='container'>
                     <Title textA='Свяжитесь с нами'/>
                     <div className={s.linkInfo}>

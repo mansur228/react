@@ -15,7 +15,7 @@ export default class Nav extends Component {
         return (
             <div className={s.Nav}>
                 <div className='container'>
-                    <a className={s.NavLogo} onClick={
+                    <a className={s.NavLogo} href='#Header' onClick={
                         (e)=>{
                             e.preventDefault()
 
@@ -25,12 +25,12 @@ export default class Nav extends Component {
                             })
                         }
                     }>
-                        <img src='../../../logo.png'/>
-                        <img src='../../../logoText.png'/>
+                        <img src='../../../logo.png' alt='logo'/>
+                        <img src='../../../logoText.png' alt='logo'/>
                     </a>
                     {/* <div className={s.NavLinksContainer}> */}
                         <nav className={s.NavLinks + ' ' + this.state.buttonState}>
-                            <a className={s.NavLink} onClick={
+                            <a className={s.NavLink} href='#AboutUs' onClick={
                                 (e)=>{
                                     e.preventDefault()
         
@@ -40,18 +40,45 @@ export default class Nav extends Component {
                                     })
                                 }
                             }>Кто мы</a>
-                            <a className={s.NavLink} href='#as'>Чему мы обучаем</a>
-                            <a className={s.NavLink} href='#asd'>Наши друзья</a>
-                            <a className={s.NavLink} href='#asdf'>Контакты</a>
-                            <a className={s.NavLink} href='#asdfg'>Вход</a>
+                            <a className={s.NavLink} href='#WhatDoWeTeach' onClick={
+                                (e)=>{
+                                    e.preventDefault()
+        
+                                    document.querySelector('#WhatDoWeTeach').scrollIntoView({
+                                        behavior: 'smooth',
+                                        block: 'start'
+                                    })
+                                }
+                            }>Чему мы обучаем</a>
+                            <a className={s.NavLink} href='#OurFriends' onClick={
+                                (e)=>{
+                                    e.preventDefault()
+        
+                                    document.querySelector('#OurFriends').scrollIntoView({
+                                        behavior: 'smooth',
+                                        block: 'start'
+                                    })
+                                }
+                            }>Наши друзья</a>
+                            <a className={s.NavLink} href='#Footer' onClick={
+                                (e)=>{
+                                    e.preventDefault()
+        
+                                    document.querySelector('#Footer').scrollIntoView({
+                                        behavior: 'smooth',
+                                        block: 'start'
+                                    })
+                                }
+                            }>Контакты</a>
+                            <a className={s.NavLink} href='#signin'>Вход</a>
                         </nav>
                         <div className={s.NavButton + ' ' + this.state.buttonState} onClick={()=>{
-                            if(this.state.buttonState === ''){
-                                this.setState({buttonState: this.state.buttonState = 'active'})
-                            } 
-                            else if(this.state.buttonState === 'active'){
-                                this.setState({buttonState: this.state.buttonState = ''})
-                            }
+                            // if(this.state.buttonState === ''){
+                            //     this.setState({buttonState: this.state.buttonState = 'active'})
+                            // } 
+                            // else if(this.state.buttonState === 'active'){
+                            //     this.setState({buttonState: this.state.buttonState = ''})
+                            // }
                         }}>
                             <span></span>
                             <span></span>

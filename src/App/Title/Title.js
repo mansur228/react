@@ -7,7 +7,7 @@ import TitleB from './TitleB/TitleB.js'
 
 export default class Title extends Component {
     render() {
-        if(this.props.textA == undefined && this.props.textB == undefined){
+        if(this.props.textA === undefined && this.props.textB === undefined){
             return(
                 <div className={s.Title}>
                     <TitleA text='Заголовок'/>
@@ -15,13 +15,13 @@ export default class Title extends Component {
                 </div>
             )
         }
-        if(this.props.textB == undefined){
+        if(this.props.textB === undefined){
             return(
                 <div className={s.Title}>
                     <TitleA text={this.props.textA}/>
                 </div>   
             )
-        } else if(this.props.textA == undefined){
+        } else if(this.props.textA === undefined){
             return(
                 <div className={s.Title}>
                     <TitleB text={this.props.textB}/>
