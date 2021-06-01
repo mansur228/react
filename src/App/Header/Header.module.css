@@ -109,3 +109,29 @@
         row-gap: 20px;
     }
 }
+@media screen and (max-width: 440px){
+    .title{
+        font-size: 28px;
+
+        grid-gap: 10px;
+
+        margin-bottom: 20px;
+    }
+    .subTitle{
+        font-size: 18px;
+
+        padding-bottom: 0;
+        margin-bottom: 20px;
+    }
+    .buttonContainer{
+        margin-top: 0;
+
+        font-size: 20px;
+        max-width: 500px;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto;
+        row-gap: 20px;
+    }
+}
